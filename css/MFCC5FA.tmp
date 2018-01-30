@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+  font-family: 'robotoB';
+  src: url('fonts/Roboto-Black.otf'); /* IE9 Compat Modes */
+  src: url('fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Roboto-Black.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Roboto-Black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Roboto-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Roboto-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#fff;
+}
+#contenedor{
+	height:100vh;
+	width:100%;
+	position:fixed;
+	display:none;
+}
+/*#logo{
+	height:100%;
+	width:50%;
+	background-color:#fcfcfc;
+	position:absolute;
+	z-index:999;
+}*/
+#menuSection{
+	height:100%;
+	width:100%;
+	background-color:#f1f1f1;
+	/*position:absolute;
+	left:20%;*/
+}
+
+#menuSection ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	top:20%;
+	left:15%;
+}
+
+#menuSection ul li{
+	height:100px;
+	width:350px;
+	font-family:'robotoB', Arial Black, sans-serif;
+	font-size:2em;
+	line-height:100px;
+	cursor:pointer;
+}
+
+#menuSection ul li a{
+	color:#000;
+	text-decoration:none;
+}
+
+.menu{
+	height:50px;
+	width:100%;
+	display:flex;
+	position:absolute;
+	left:-1%;
+	cursor:pointer;
+	pointer-events:none;
+	
+}
+
+#menuSection ul li:hover .menu{
+	background-color:#ffc200;
+	transition: all .5s;
+	width:350px;
+	border-radius:30px;
+	
+}
+#openMenu, #closeMenu{
+	position:fixed;
+	top:3%;
+	left:5%;
+	/*transform:translate(-50%);*/
+	z-index:999;
+	cursor:pointer;
+}
+
+#iconoMenu:hover{
+	color:#CC6633;
+}
+
+#iconoCerrar:hover{
+	color:#CC6633;
+}
+
+#closeMenu{
+	cursor:pointer;
+	position:absolute;
+	top:5%;
+	left:90%;
+}
+
+#redesSociales figure{
+	float:left;
+	margin:0 .5em 0 0;
+}
+
+#redesSociales{
+	position:absolute;
+	top:90%;
+	left:50%;
+}
+
+h1{
+	font-family:Roboto, Verdana, Sans-serif;
+	font-size:1em;
+	position:absolute;
+	top:2.3%;
+	left:59%;	
+}
+
+#blanco{
+	color:#fff;	
+}
+
+
+.resaltadoTitulo{
+	font-family:'robotoB',Arial Black, Sans-serif;
+	color:#cc6633;
+	font-size:1.2em;
+}
+
+#parteArriba{
+	background-color:rgba(255, 125, 61, .8);
+	width:90%;
+	height:35%;
+	margin:0 auto;
+	position:absolute;
+	top:10%;
+	left:5%;
+	z-index:200;
+}
+
+#parteAbajo{
+	background-image:url(../img/pruebaFondo.jpg);
+	width:90%;
+	height:78%;
+	position:absolute;
+	top:10%;
+	left:5%;
+	margin: 0 auto;
+	opacity: 0.3;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link type="text/css" rel="stylesheet" href="../css/estilos.css">
+<script src="../js/scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Home - The web factory</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../img/facebookHover.png','../img/twitterHover.png','../img/intagramHover.png','../img/correoHover.png')">
+	<header>
+        <h1 id="nombreEmpresa">The <span class="resaltadoTitulo">&lt;web&gt;</span> factory</h1>
+        <div id="openMenu">
+            <!--<img src="img/menu.png"  />-->
+            <i class="fas fa-bars fa-2x" id="iconoMenu"></i>
+        </div>
+        <div id="closeMenu">
+            <i class="fas fa-times fa-1x" id="iconoCerrar"></i>
+            <!--<img src="img/cerrar.png" width="50%" height="50%"/>-->
+        </div>
+	<div id="contenedor">
+    	<div id="logo"></div>
+        <nav id="menuSection">
+        	<ul>
+            	<li><a href="../index.html"><div class="menu">Home</div></a></li>
+            	<li><a href="file:///F|/diseño/PROYECTO/ProyectoV2/html/about.html"><div class="menu">Sobre Nosotros</a></div></li>
+                <li><a href="#"><div class="menu">Proyectos</div></a></li>
+                <li><a href="#"><div class="menu">Contacto</div></a></li>
+            </ul>
+        </nav>
+</header>
+	<!-- InstanceBeginEditable name="cuerpo" -->
+	<div id="colorcito">
+    ASDADAD
+    </div>
+    <footer>
+      <section id="redesSociales">
+        <figure><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('facebook','','../img/facebookHover.png',1)"><img src="../img/facebook.png" alt="Facebook" width="36" height="36" id="facebook" /></a></figure>
+        <figure><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Twitter','','../img/twitterHover.png',1)"><img src="../img/twitter.png" alt="Twitter" width="36" height="36" id="Twitter" /></a></figure>
+        <figure><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('instagram','','../img/intagramHover.png',1)"><img src="../img/intagram.png" alt="Instagram" width="36" height="36" id="instagram" /></a></figure>
+        <figure><a href="mailto:thewebfactory@gmail.com" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('correo','','../img/correoHover.png',1)"><img src="../img/correo.png" alt="Enviar correo" width="36" height="36" id="correo" /></a></figure>
+      </section>
+    </footer>
+    <!-- InstanceEndEditable --><script>
+		$(document).ready(function(){
+			$("#closeMenu").hide();
+			$("#textoscroll").hide();
+			$("#iconoCerrarScroll").hide();
+			$("#openMenu").click(function(){
+				$("#contenedor").fadeIn(200);
+				$("#parteArriba").hide();
+				$("#parteAbajo").hide();
+				$("#openMenu").hide("normal");
+				$("#closeMenu").show("normal");
+				$("#redesSociales").hide();
+			});
+	
+			$("#closeMenu").click(function(){
+				$("#contenedor").fadeOut(200);
+				$("#openMenu").show("normal");
+				$("#parteArriba").show();
+				$("#parteAbajo").show();
+				$("#closeMenu").hide("normal");
+				$("#redesSociales").show();
+			});
+			
+			$("#flechaClic").click(function(){
+				$("#textoscroll").fadeIn(200);
+				$("#nombreEmpresa").hide();
+				$("#parteArriba").hide();
+				$("#parteAbajo").hide();
+				$("#openMenu").hide("normal");
+				$("#redesSociales").hide();
+				$("#iconoCerrarScroll").show();
+			});
+			
+			$("#iconoCerrarScroll").click(function(){
+				$("#textoscroll").fadeOut(200);
+				$("#nombreEmpresa").show();
+				$("#parteArriba").show();
+				$("#parteAbajo").show();
+				$("#openMenu").show("normal");
+				$("#redesSociales").show();
+				$("#iconoCerrarScroll").hide();
+			});
+	
+		});
+	</script>
+</body>
+<!-- InstanceEnd --></html>
